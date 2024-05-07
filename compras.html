@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/bf1edbf89d.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/YJC.png">
+</head>
+<style>
+    .foto {
+        width: 200px;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+    .listinha{background-color: rgb(58, 21, 3);
+    color: white;
+
+
+        }
+        .horizontal-menu {
+    background-color: #333;
+}
+
+.horizontal-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-menu li {
+    display: inline;
+}
+
+.horizontal-menu a {
+    display: inline-block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.horizontal-menu a:hover {
+    background-color: #111;
+}
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+
+    .nav {
+        background-color: var(--primary-color);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav a {
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .nav a:hover {
+        border-bottom: 3px solid rgb(0, 0, 0);
+        color: black;
+    }
+
+    .nav a.active {
+        border-bottom: 3px solid var(--secondary-color);
+    }
+
+    .row1 {
+        padding: 50px;
+    }
+
+    .card-img-top {
+        height: 250px;
+    }
+
+    .card-title {
+        font-weight: bolder;
+    }
+
+    .banner {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .btn {
+        color: var(--primary-color);
+    }
+
+    .icons {
+        width: 100%;
+        background-color: var(--primary-color);
+        height: 100px;
+        text-align: center;
+        padding-top: 30px;
+        color: aliceblue;
+    }
+
+    .icons i {
+        color: var(--secondary-color);
+        padding: 0 25px;
+    }
+
+    .foot {
+        text-align: center;
+        color: var(--primary-color);
+        padding-top: 10px;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    
+
+
+    .cart {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        overflow-y: auto;
+        padding: 20px;
+    }
+
+    .cart h2 {
+        margin-bottom: 20px;
+    }
+
+    .cart ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .cart li {
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+
+    .cart-icon {
+        cursor: pointer;
+        position: fixed;
+        top: 50px;
+        right: 20px;
+        font-size: 24px;
+        color: #1d1f27;
+        z-index: 1000;
+    }
+
+    .cart-icon:hover {
+        color: #333;
+    }
+
+    #close-cart {
+        float: right;
+    }
+    .rodape{position: absolute;
+        left: 0px;
+        width: 1518px;
+        height: 180px;
+        background-color:rgb(58, 21, 3);
+        margin: auto;
+        top: 900px;
+        margin: 0;
+        padding: 0;
+    }
+    .rd{
+        text-align: center;
+        margin-top: 5rem;
+        color: white;
+        justify-content: center;
+        
+       
+    }
+    .letra{text-align: center;
+color: white;
+top: 0px;
+    }
+</style>
+
+<body>
+
+<img src="/Yale/cacaushowl.png" alt="cacaushowl" class="foto">
+<h2 class="listinha">PRODUTOS <nav class="horizontal-menu">
+    <ul>
+        <li><a href="/Yale/exercicio 04/formulario.html">inicio </a></li>
+        <li><a href="/Yale/exercicio 04/sobre.html">sobre</a></li>
+        <li><a href="/Yale/exercicio 04/cadastro.html">cadastro</a></li>
+        <li><a href="/Yale/exercicio 04/compras.html">compras </a></li>
+    </ul>
+</nav></h2>
+
+<div id="cart-icon" class="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-total">0</span>
+</div>
+
+<div class="banner">
+    <div>
+        <h1 style="font-family: Hello Ice Cream Demo;font-size:900 ; font-weight: bold;">CHOCOLATES</h1>
+        <br>
+        <h5 style="font-family: 'Gill Sans', sans-serif; font-size: large;">Faça já seu pedido!</h5>
+        <button id="scrollToItems" class="btn" style="background-color: rgb(58, 21, 3) ; color:whitesmoke">  PEDIR  </button>
+    </div>
+</div>
+
+<div class="producctcards" id="shop">
+    <div class="row row1">
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="/Yale/exercicio 04/angelchoco.webp" class="card-img-top" alt="choco angel">
+                <div class="card-body">
+                    <h5 class="card-title"> Caixa Angel Coração</h5>
+                    <p class="card-text">Cacau Show Caixa Angel Coração 75g por apenas R$44,90.</p>
+                    <a href="#" class="btn buy-btn" data-product="cacau show"
+                       style="background-color: rgb(58, 21, 3) ; color:whitesmoke">Adicionar ao Carrinho🛒</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="/Yale/exercicio 04/caixasortido.webp" class="card-img-top" alt="	
+                        Cacau Show Caixa Gourmet">
+                <div class="card-body">
+                    <h5 class="card-title">	
+                        Cacau Show Caixa Gourmet 485g</h5>
+                    <p class="card-text">	
+                        Cacau Show Caixa Gourmet 485g
+                        Caixa sortida um presente que surpreende!, por apenas R$130,00.</p>
+                    <a href="#" class="btn buy-btn" data-product="cacau show"
+                       style="background-color: rgb(58, 21, 3) ; color:whitesmoke">Adicionar ao Carrinho🛒</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="/Yale/exercicio 04/cestachoco.webp" class="card-img-top" alt="	
+                        Cesta De Chocolates Para Presente Cacau Show (6 chocolates)">
+                <div class="card-body">
+                    <h5 class="card-title">	
+                        Cesta De Chocolates Para Presente Cacau Show (6 chocolates)</h5>
+                    <p class="card-text">Cesta para dar de presentes(especial dia das mães) por apenas R$100,00.</p>
+                    <a href="#" class="btn buy-btn" data-product="cacau show"
+                       style="background-color: rgb(58, 21, 3); color:whitesmoke">Adicionar ao Carrinho🛒</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="/Yale/exercicio 04/minichoco.webp" class="card-img-top" alt="	
+                        Kit Com 37 Tabletes Chocolate 5g Cada ">
+                <div class="card-body">
+                    <h5 class="card-title">	
+                        Kit Com 37 Tabletes Chocolate 5g Cada</h5>
+                    <p class="card-text">tabletes com sabor adocicado, 34% de cacau, uma delíciapor apenas R$70,00.</p>
+                    <a href="#" class="btn buy-btn" data-product="Camisa Estilosa"
+                       style="background-color: rgb(58, 21, 3) ; color:whitesmoke">Adicionar ao Carrinho🛒</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="cart" class="cart" style="display: none;">
+    <h2>Carrinho <button id="close-cart" class="btn btn-sm btn-danger">Fechar</button></h2>
+    <ul id="cart-items"></ul>
+    <button id="checkout-button" class="btn btn-primary">Pagar Agora</button>
+</div>
+
+<div class="banner2">
+</div>
+<div class="footer">
+    <footer>
+        <div class="icons">
+            <a href=""><i class="fa-brands fa-youtube fa-2x"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa-2x"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a>
+            <a href=""><i class="fa-brands fa-twitter fa-2x"></i></a>
+        </div>
+    </footer>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+    const buyButtons = document.querySelectorAll('.buy-btn');
+    const cart = document.getElementById('cart');
+    const cartItems = document.getElementById('cart-items');
+    const cartIcon = document.getElementById('cart-icon');
+    const scrollToItemsButton = document.getElementById('scrollToItems');
+    const closeCartButton = document.getElementById('close-cart');
+    const cartTotal = document.getElementById('cart-total');
+    const checkoutButton = document.getElementById('checkout-button');
+
+    let itemCount = 0;
+
+    scrollToItemsButton.addEventListener('click', () => {
+        document.getElementById('shop').scrollIntoView({behavior: 'smooth'});
+    });
+
+
+    cartIcon.addEventListener('click', () => {
+        if (cart.style.display === 'none') {
+            cart.style.display = 'block';
+        } else {
+            cart.style.display = 'none';
+        }
+    });
+
+    closeCartButton.addEventListener('click', () => {
+        cart.style.display = 'none';
+    });
+
+    buyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const productName = button.getAttribute('data-product');
+
+            const li = document.createElement('li');
+            li.textContent = productName;
+            cartItems.appendChild(li);
+
+            itemCount++;
+            cartTotal.textContent = itemCount;
+
+            cart.style.display = 'block';
+
+            Swal.fire({
+                title: 'Item Adicionado!',
+                text: `Seu item foi adicionado com sucesso no carrinho: ${productName}`,
+                icon: 'success',
+                confirmButtonText: 'Ok'
+            });
+        });
+    });
+
+    checkoutButton.addEventListener('click', () => {
+        Swal.fire({
+            title: 'Compra Realizada!',
+            text: 'Obrigado por comprar na loja!',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+        });
+
+        document.getElementById('cart-items').innerHTML = '';
+        document.getElementById('cart-total').textContent = '0';
+
+        cart.style.display = 'none';
+    });
+
+</script>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-6">
+                
+                </ul>
+                <footer class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                   
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                               <div class="rodape">
+                                <p class="letra">&copy; 2024 CACAU SHOW.Todos os direitos reservados.</p></div>
+                            </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    </ul>
+</footer>
+</body>
+</html>
